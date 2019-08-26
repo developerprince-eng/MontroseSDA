@@ -66,7 +66,7 @@
       <!-- content begin -->
       <div id="content">
           <div class="container-fluid" style="padding: 0 !important;">
-              <section style="width: 100%;">
+              <section style="width: 100%; margin: 0; padding: 0;">
                   <div class="jumbotron" style="background: white;">
                       <h1 class="display-4" style="text-align: center; text-emphasis: none;">Church History</h1>
                       <p style="text-align:center">The Chucrch Became and Independet Church in the year 2009 as it broke of from the mother Church which is Baham Green SDA. Montrose 
@@ -76,18 +76,190 @@
                       <hr class="my-4">
                   </div>
               </section>
-              <section>
-         
+              <section style="width: 100%; margin: 0; padding: 0;">
+                    <!-- slider -->
+                    <div id="slider">
+                        <!-- revolution slider begin -->
+                        <div class="fullwidthbanner-container">
+                            <div id="revolution-slider">
+                                <ul>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide01.jpg" alt="">
+                                        <div class="tp-caption border-v lft"
+                                            data-x="540"
+                                            data-y="center"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide2.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide3.jpg" alt="">
+                                        <div class="tp-caption border-v lft"
+                                            data-x="540"
+                                            data-y="center"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide4.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide5.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide6.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide7.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide8.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide9.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide10.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide11.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide12.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                    <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
+                                        <!--  BACKGROUND IMAGE -->
+                                        <img src="<?php echo base_url() ?>static/img/slides/slide13.jpg" alt="">
+                                        <div class="tp-caption custom-font-1 lft"
+                                            data-x="left"
+                                            data-y="140"
+                                            data-speed="800"
+                                            data-start="400"
+                                            data-easing="easeInOutCubic"
+                                            data-endspeed="300">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- revolution slider close -->
+                    </div>
+                    <!-- slider close -->
               </section>
-              <section>
-                  <video controls style="width:100%;height:100%;" poster="">
-                      <source src="<?php echo base_url() ?>/static/videos/church-video.mp4" 
-                              type='video/webm;codecs="vp8, vorbis"' />
-                      <source src="devstories.mp4" 
-                              type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
-                      <track src="devstories-en.vtt" label="English subtitles" 
-                              kind="subtitles" srclang="en" default></track>
-                    </video>
+              <br>
+              <br>
+              <section style="width: 100%; margin: 0; padding: 0;">
+                <h2> Play Media to More About Our Church</h2>
+                <br>
+                <video controls style="width:100%;height:100%;" poster="">
+                    <source src="<?php echo base_url() ?>/static/videos/church-video.mp4" 
+                            type='video/webm;codecs="vp8, vorbis"' />
+                    <source src="devstories.mp4" 
+                            type='video/mp4;codecs="avc1.42E01E, mp4a.40.2"' />
+                    <track src="devstories-en.vtt" label="English subtitles" 
+                            kind="subtitles" srclang="en" default></track>
+                </video>
               </section>
               <section>
                 <div class="jumbotron" style="background: white;">
