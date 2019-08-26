@@ -30,14 +30,14 @@
 
                                 <li><a href="<?php echo base_url() ?>">Home</a>
                                 </li>
-                                <li><a href="<?php echo base_url() ?>/events">Events</a>
+                                <li><a href="<?php echo base_url() ?>events">Events</a>
                                 </li>
-                                <li><a href="<?php echo base_url() ?>/sermons">Sermons</a></li>
-                                <li><a href="<?php echo base_url() ?>/church-building">Church Building</a></li>
-                                <li><a href="<?php echo base_url() ?>/ministries">Ministries</a></li>
-                                <li><a href="<?php echo base_url() ?>/news">News</a></li>
-                                <li><a href="<?php echo base_url() ?>/gallery">Gallery</a></li>
-                                <li><a href="<?php echo base_url() ?>/contact">Contact</a></li>
+                                <li><a href="<?php echo base_url() ?>sermons">Sermons</a></li>
+                                <li><a href="<?php echo base_url() ?>church-building">Church Building</a></li>
+                                <li><a href="<?php echo base_url() ?>ministries">Ministries</a></li>
+                                <li><a href="<?php echo base_url() ?>news">News</a></li>
+                                <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
+                                <li><a href="<?php echo base_url() ?>contact">Contact</a></li>
                             </ul>
                         </div>
                         <!-- mainmenu close -->
