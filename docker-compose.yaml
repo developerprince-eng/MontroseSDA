@@ -1,0 +1,24 @@
+version: '3.3'
+services:
+  web:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: startupszw
+    # depends_on:
+    #   - db
+    volumes:
+      - ./:/var/www/html/
+    ports:
+      - 8777:80
+  # db:
+  #   container_name: startups_db
+  #   image: mysql:5.6
+  #   command: --default-authentication-plugin=mysql_native_password
+  #   restart: always
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: Start458392#&ds!@
+  #     MYSQL_DATABASE: startup
+  #     MYSQL_USER: startupsco
+  #   ports:
+  #     - 3306:3306
