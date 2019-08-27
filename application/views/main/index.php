@@ -228,7 +228,7 @@
                     <div class="row text-center">
                         <div class="col-md-6 wow fadeInLeft">
                             <h3>Camp Meeting</h3>
-                            <span class="time">August 12, 2019 8:00 pm</span>
+                            <span class="time">August 9, 2020 8:00 pm</span>
                         </div>
 
                         <div class="col-md-6 wow fadeInRight" data-wow-delay=".25s">
@@ -336,7 +336,6 @@
                             <h2>From Gallery</h2>
                             <div class="divider-double"></div>
                         </div>
-
                         <div id="gallery-isotope" class="col-md-12 wow fadeInUp" data-wow-delay=".25s">
                             <?php foreach($gallery as $item) : ?>
                             <div class="item small-pic">

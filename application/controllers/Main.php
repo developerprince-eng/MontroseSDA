@@ -23,4 +23,12 @@ class Main extends CI_Controller {
 		$this->load->view('main/contact');
 		$this->load->view('templates/footer');
 	}
+
+	public function gallery()
+	{
+		$data['gallery'] = $this->gallery_model->get_gallery();
+		$this->load->view('templates/header');
+		$this->load->view('main/gallery', $data);
+		$this->load->view('templates/footer');
+	}
 }
