@@ -5,6 +5,7 @@ class Main extends CI_Controller {
 	public function index()
 	{
 		$data['gallery'] =	$this->gallery_model->get_gallery();
+		$data['sermon'] = $this->sermons_model->get_last_sermon();
 		$this->load->view('templates/header');
 		$this->load->view('main/index', $data);
 		$this->load->view('templates/footer');

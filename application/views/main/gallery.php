@@ -63,16 +63,13 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-
                         <h1>Our Gallery</h1>
                     </div>
                 </div>
             </div>
         </section>
         <!-- subheader close -->
-
         <div class="clearfix"></div>
-
         <!-- content begin -->
         <div id="content">
             <div class="container">
@@ -91,7 +88,7 @@
                     <?php if($gallery == null): ?>
                     <div class="jumbotron jumbotron-fluid" style="background: white;">
                         <div class="container">
-                            <h1 class="display-4" style="text-align: center;">Currently There are Pictures</h1>
+                            <h1 class="display-4" style="text-align: center;">Currently There are no Pictures</h1>
                             <p class="lead" style="text-align: center;">Please Check Later for any Pictures or Contact Communications Director</p>
                         </div>
                     </div>

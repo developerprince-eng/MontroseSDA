@@ -67,7 +67,7 @@
                     <ul>
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="<?php echo base_url() ?>/static/img-rev-slider/bg-1.jpg" alt="">
+                            <img src="<?php echo base_url() ?>static/img-rev-slider/bg-1.jpg" alt="">
                             <div class="tp-caption border-v lft"
                                 data-x="540"
                                 data-y="center"
@@ -105,20 +105,11 @@
                                 Transforming lives and societies through education, research and innovation.<br>
                                 Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<br>
                             </div>
-
-                            <div class="tp-caption sfb text-left"
-                                data-x="600"
-                                data-y="320"
-                                data-speed="800"
-                                data-start="1600"
-                                data-easing="easeInOutCubic">
-                                <a class="btn btn-slider" href="#">Read More</a>
-                            </div>
                         </li>
 
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="<?php echo base_url() ?>/static/img-rev-slider/bg-2.jpg" alt="">
+                            <img src="<?php echo base_url() ?>static/img-rev-slider/bg-2.jpg" alt="">
                             <div class="tp-caption custom-font-1 lft"
                                 data-x="left"
                                 data-y="140"
@@ -148,19 +139,11 @@
                                 Incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.<br>
                             </div>
 
-                            <div class="tp-caption sfb text-left"
-                                data-x="left"
-                                data-y="320"
-                                data-speed="800"
-                                data-start="1600"
-                                data-easing="easeInOutCubic">
-                                <a class="btn btn-slider" href="#">Read More</a>
-                            </div>
                         </li>
 
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="<?php echo base_url() ?>/static/img-rev-slider/bg-3.jpg" alt="">
+                            <img src="<?php echo base_url() ?>static/img-rev-slider/bg-3.jpg" alt="">
                             <div class="tp-caption border-v lft"
                                 data-x="540"
                                 data-y="center"
@@ -198,15 +181,6 @@
                                 The first step in overcoming any kind of situation that holds me in bondage<br>
                                 in my thoughts,mind, body and spirit is to surrender it to God<br>
                             </div>
-
-                            <div class="tp-caption sfb text-left"
-                                data-x="600"
-                                data-y="320"
-                                data-speed="800"
-                                data-start="1600"
-                                data-easing="easeInOutCubic">
-                                <a class="btn btn-slider" href="#">Read More</a>
-                            </div>
                         </li>
                     </ul>
                 </div>
@@ -219,9 +193,6 @@
 
         <!-- content begin -->
         <div id="content" class="no-padding">
-
-           
-
             <!-- section begin -->
             <section id="countdown-container" data-speed="5" data-type="background">
                 <div class="container">
@@ -285,7 +256,7 @@
                             <h2>Latest Sermons</h2>
                             <div class="divider-double"></div>
                         </div>
-
+                        <?php if($sermon == null): ?>
                         <div class="col-md-10 col-md-offset-1">
                             <div class="custom-col-3 wow flipInX">
                                 <div class="left-col">
@@ -301,6 +272,23 @@
                                 </div>
                             </div>
                         </div>
+                        <?php else: ?>
+                        <div class="col-md-10 col-md-offset-1">
+                            <div class="custom-col-3 wow flipInX">
+                                <div class="left-col">
+                                    <img src="<?php echo base_url() ?>/static/img/sermons/pic%20(1).jpg" alt="" class="img-responsive">
+                                </div>
+                                <div class="mid-col">
+                                    <a href="#">
+                                        <h3><?php echo $sermon['title'] ?></h3>
+                                    </a>
+                                </div>
+                                <div class="right-col">
+                                    <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php endif?>
                     </div>
                 </div>
             </section>
@@ -336,14 +324,23 @@
                             <h2>From Gallery</h2>
                             <div class="divider-double"></div>
                         </div>
+                        <?php if($gallery == null): ?>
+                        <div class="jumbotron jumbotron-fluid" style="background: white;">
+                            <div class="container">
+                                <h1 class="display-4" style="text-align: center;">Currently There are no Pictures</h1>
+                                <p class="lead" style="text-align: center;">Please Check Later for any Pictures or Contact Communications Director</p>
+                            </div>
+                        </div>
+                        <?php else: ?>
+                        <?php foreach($gallery as $item) : ?>
                         <div id="gallery-isotope" class="col-md-12 wow fadeInUp" data-wow-delay=".25s">
-                            <?php foreach($gallery as $item) : ?>
                             <div class="item small-pic">
                                 <a href="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
                                 <img src="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" alt="">
                             </div>
-                            <?php endforeach ?>
                         </div>
+                        <?php endforeach ?>
+                        <?php endif?>
                     </div>
                 </div>
             </section>
@@ -369,7 +366,6 @@
                                         Get in touch with MontroseSDA today and get ready to see your church grow!
                                     </blockquote>
                                 </div>
-
                             </div>
                         </div>
                     </div>
