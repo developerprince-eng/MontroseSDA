@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 25, 2019 at 10:17 PM
+-- Generation Time: Aug 26, 2019 at 11:36 PM
 -- Server version: 8.0.16
 -- PHP Version: 7.2.20
 
@@ -85,6 +85,24 @@ CREATE TABLE `sermons` (
   `approve` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `uid` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `surname` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `cellphone` bigint(16) NOT NULL,
+  `profile_img` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `role` varchar(4) NOT NULL DEFAULT 'user'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 --
 -- Indexes for dumped tables
 --
@@ -114,6 +132,12 @@ ALTER TABLE `sermons`
   ADD PRIMARY KEY (`sid`);
 
 --
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`uid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -140,6 +164,12 @@ ALTER TABLE `news`
 --
 ALTER TABLE `sermons`
   MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
