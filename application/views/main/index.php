@@ -67,7 +67,7 @@
                     <ul>
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="<?php echo base_url() ?>static/img-rev-slider/bg-1.jpg" alt="">
+                            <img src="<?php echo base_url() ?>static/img/bg-1.jpg" alt="">
                             <div class="tp-caption border-v lft"
                                 data-x="540"
                                 data-y="center"
@@ -109,7 +109,7 @@
 
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="<?php echo base_url() ?>static/img-rev-slider/bg-2.jpg" alt="">
+                            <img src="<?php echo base_url() ?>static/img/bg-2.jpg" alt="">
                             <div class="tp-caption custom-font-1 lft"
                                 data-x="left"
                                 data-y="140"
@@ -143,7 +143,7 @@
 
                         <li data-transition="fade" data-slotamount="10" data-masterspeed="1500">
                             <!--  BACKGROUND IMAGE -->
-                            <img src="<?php echo base_url() ?>static/img-rev-slider/bg-3.jpg" alt="">
+                            <img src="<?php echo base_url() ?>static/img/bg-3.jpg" alt="">
                             <div class="tp-caption border-v lft"
                                 data-x="540"
                                 data-y="center"
