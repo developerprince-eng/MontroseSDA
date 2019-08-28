@@ -19,6 +19,6 @@ class User_model extends CI_Model{
 	}	
 	public function get_user_num(){
 		return $this->db->count_all('users');
-	}
+    }
 }
 ?>
