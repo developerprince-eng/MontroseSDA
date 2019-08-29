@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 28, 2019 at 09:24 PM
+-- Generation Time: Aug 29, 2019 at 05:47 AM
 -- Server version: 8.0.16
 -- PHP Version: 7.2.20
 
@@ -110,6 +110,24 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`uid`, `username`, `name`, `surname`, `email`, `cellphone`, `profile_img`, `password`, `role`) VALUES
 (1, '', '', '', 'nompi.h@gmail.com', 0, '', 'd78cf7aa9f0a49e788d6e9ff8f88d710', 'admin');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visitors`
+--
+
+CREATE TABLE `visitors` (
+  `id` int(11) NOT NULL,
+  `visits` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `visitors`
+--
+
+INSERT INTO `visitors` (`id`, `visits`) VALUES
+(1, 0);
+
 --
 -- Indexes for dumped tables
 --
@@ -145,6 +163,12 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`uid`);
 
 --
+-- Indexes for table `visitors`
+--
+ALTER TABLE `visitors`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -177,6 +201,12 @@ ALTER TABLE `sermons`
 --
 ALTER TABLE `users`
   MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `visitors`
+--
+ALTER TABLE `visitors`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
