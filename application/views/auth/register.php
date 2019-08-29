@@ -13,12 +13,12 @@
 
 <?php echo form_open('auth/register');?>
   <div class="login__card"> 
-    <label class="login__label" for="email">E-mail:</label>
-    <input class="login__input" id="email" type="email" placeholder="Email">
-    <label class="login__label" for="password">Password:</label>
-    <input class="login__input" id="password" type="password" placeholder="Password">
-    <label class="login__label" for="password2">Repeat Password:</label>
-    <input class="login__input" id="password2" type="password" placeholder="Confirm password">
+    <label class="login__label">E-mail:</label>
+    <input class="login__input" name="email" type="email" placeholder="Email">
+    <label class="login__label" >Password:</label>
+    <input class="login__input" name="password" type="password" placeholder="Password">
+    <label class="login__label" >Repeat Password:</label>
+    <input class="login__input" name="password2" type="password" placeholder="Confirm password">
     <button type="submit" class="login__button ">Register</button>
   </div>
 <?php echo form_close(); ?>

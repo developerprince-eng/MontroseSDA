@@ -34,10 +34,10 @@ class Auth extends CI_Controller {
 				$this->session->set_flashdata('login_successful','Login in Successful');
 				$data['user'] = $user_id;
 				
-				redirect('startups', $data);
+				redirect('dashboard', $data);
 			}else{
 				$this->session->set_flashdata('login_failed','Login in invalid check email & password');
-				redirect('user');
+				redirect('auth');
 			}
 
 			redirect('dashboard');
@@ -61,6 +61,7 @@ class Auth extends CI_Controller {
 	
 	public function register(){
 		$this->load->library('form_validation');
+		$this->load->library('session');
     	$this->form_validation->set_rules('email','Email','required');
 		$this->form_validation->set_rules('password','Password', 'required');
 		$this->form_validation->set_rules('password2','Confirm Password','matches[password]');

@@ -14,13 +14,13 @@
 <?php echo form_open('auth/login');?>
   <div class="login__card">
     
-    <label class="login__label" for="email">E-mail:</label>
-    <input class="login__input" id="email" type="email" placeholder="youremail@gmail.com">
+    <label class="login__label">E-mail:</label>
+    <input class="login__input" name="email" type="email" placeholder="youremail@gmail.com">
     <?php if( validation_errors() === "The Email field is required"): ?>
       <?php echo '<p class="alert alert-success">'.validation_errors().'</p>';?>
     <?php endif; ?>
-    <label class="login__label" for="password">Password:</label>
-    <input class="login__input" id="password" type="password" placeholder="password">
+    <label class="login__label">Password:</label>
+    <input class="login__input" name="password" type="password" placeholder="password">
     <?php if( validation_errors() === "The Password field is required"): ?>
       <?php echo '<p class="alert alert-success">'.validation_errors().'</p>';?>
     <?php endif; ?>
