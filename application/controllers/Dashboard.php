@@ -16,6 +16,7 @@ class Dashboard extends CI_Controller {
 
 	public function events_list()
 	{
+		$this->load->library('session');
 		if(!$this->session->userdata('logged_in')){
 			redirect('auth');
 		}
@@ -27,6 +28,7 @@ class Dashboard extends CI_Controller {
 
 	public function event_add()
 	{
+		$this->load->library('session');
 		if(!$this->session->userdata('logged_in')){
 			redirect('auth');
 		}
