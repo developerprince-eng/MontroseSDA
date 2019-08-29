@@ -38,4 +38,76 @@ class Dashboard extends CI_Controller {
 		$this->load->view('templates/dashboard-footer');
 	}
 
+	public function gallery_list()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$data['gallery'] = $this->gallery_model->get_gallery();
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/gallery_list', $data);
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function gallery_item_add()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/gallery_item_add');
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function news_list()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$data['news'] = $this->news_model->get_news();
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/news_list', $data);
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function news_add()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/news_add');
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function sermons_list()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$data['sermons'] = $this->sermons_model->get_sermons();
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/sermons_list', $data);
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function sermon_add()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/sermon_add');
+		$this->load->view('templates/dashboard-footer');
+	}
+
 }

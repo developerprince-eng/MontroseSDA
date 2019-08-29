@@ -86,8 +86,8 @@
             </a>
             <div class="collapse" id="events">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="dashboard/events-list"> View List </a></li>
-                <li class="nav-item"> <a class="nav-link" href="dashboard/event-add"> Add Event </a></li>
+                <li class="nav-item"> <a class="nav-link" href="events-list"> View List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="event-add"> Add Event </a></li>
               </ul>
             </div>
           </li>
@@ -99,8 +99,8 @@
             </a>
             <div class="collapse" id="news">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="dashboard/news-list"> View List </a></li>
-                <li class="nav-item"> <a class="nav-link" href="dashboard/news-add"> Add News </a></li>
+                <li class="nav-item"> <a class="nav-link" href="news-list"> View List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="news-add"> Add News </a></li>
               </ul>
             </div>
           </li>
@@ -112,8 +112,8 @@
             </a>
             <div class="collapse" id="gallery">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="dashboard/gallery-list"> View List </a></li>
-                <li class="nav-item"> <a class="nav-link" href="dashboard/gallery-item-add"> Add Picture </a></li>
+                <li class="nav-item"> <a class="nav-link" href="gallery-list"> View List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="gallery-item-add"> Add Picture </a></li>
               </ul>
             </div>
           </li>
@@ -125,8 +125,8 @@
             </a>
             <div class="collapse" id="sermons">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="dashboard/sermons-list"> View List </a></li>
-                <li class="nav-item"> <a class="nav-link" href="dashboard/sermon-add"> Add Sermon </a></li>
+                <li class="nav-item"> <a class="nav-link" href="sermons-list"> View List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="sermon-add"> Add Sermon </a></li>
               </ul>
             </div>
           </li>
