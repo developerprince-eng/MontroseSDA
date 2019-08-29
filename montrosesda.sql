@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 26, 2019 at 11:36 PM
+-- Generation Time: Aug 28, 2019 at 09:24 PM
 -- Server version: 8.0.16
 -- PHP Version: 7.2.20
 
@@ -100,8 +100,15 @@ CREATE TABLE `users` (
   `cellphone` bigint(16) NOT NULL,
   `profile_img` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` varchar(4) NOT NULL DEFAULT 'user'
+  `role` varchar(5) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`uid`, `username`, `name`, `surname`, `email`, `cellphone`, `profile_img`, `password`, `role`) VALUES
+(1, '', '', '', 'nompi.h@gmail.com', 0, '', 'd78cf7aa9f0a49e788d6e9ff8f88d710', 'admin');
 
 --
 -- Indexes for dumped tables
@@ -169,7 +176,7 @@ ALTER TABLE `sermons`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
