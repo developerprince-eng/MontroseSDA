@@ -8,7 +8,9 @@ class Dashboard extends CI_Controller {
 		if(!$this->session->userdata('logged_in')){
 			redirect('auth');
 		}
-		$data['event'] = $this->event_model->get_events();
+		$data['sermons'] = $this->sermons_model->get_sermons();
+		$data['visits'] = $this->visitors_model->get_visits();
+		$data['news'] = $this->news_model->get_news();
 		$this->load->view('templates/dashboard-header');
 		$this->load->view('dashboard/index', $data);
 		$this->load->view('templates/dashboard-footer');

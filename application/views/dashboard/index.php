@@ -44,44 +44,48 @@
                     <i class="mdi mdi-calendar-heart icon-lg mr-3 text-primary"></i>
                     <div class="d-flex flex-column justify-content-around">
                     <small class="mb-1 text-muted">Sermons</small>
+                    <?php if($sermons == null): ?>
+                    <h5 class="mr-2 mb-0">0</h5>
+                    <?php else: ?>
                     <div class="dropdown">
                         <a class="btn btn-secondary dropdown-toggle p-0 bg-transparent border-0 text-dark shadow-none font-weight-medium" href="#" role="button" id="dropdownMenuLinkA" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <h5 class="mb-0 d-inline-block">26 Jul 2018</h5>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkA">
-                        <a class="dropdown-item" href="#">12 Aug 2018</a>
-                        <a class="dropdown-item" href="#">22 Sep 2018</a>
-                        <a class="dropdown-item" href="#">21 Oct 2018</a>
+                        <?php foreach($sermons as $item) : ?>
+                        <a class="dropdown-item" href="#"><?php echo $item['date'] ?></a>
+                        <?php endforeach?>
                         </div>
                     </div>
+                    <?php endif?>
                     </div>
                 </div>  
                 <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                     <i class="mdi mdi-currency-usd mr-3 icon-lg text-danger"></i>
                     <div class="d-flex flex-column justify-content-around">
                     <small class="mb-1 text-muted">Revenue</small>
-                    <h5 class="mr-2 mb-0">$577545</h5>
+                    <h5 class="mr-2 mb-0">0</h5>
                     </div>
                 </div>
                 <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                     <i class="mdi mdi-eye mr-3 icon-lg text-success"></i>
                     <div class="d-flex flex-column justify-content-around">
                     <small class="mb-1 text-muted">Total views</small>
-                    <h5 class="mr-2 mb-0">9833550</h5>
+                    <h5 class="mr-2 mb-0"><?php foreach($visits as $visit_num): ?><?php echo $visit_num['visits']?><?php endforeach ?></h5>
                     </div>
                 </div>
                 <div class="d-flex border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                     <i class="mdi mdi-download mr-3 icon-lg text-warning"></i>
                     <div class="d-flex flex-column justify-content-around">
                     <small class="mb-1 text-muted">Downloads</small>
-                    <h5 class="mr-2 mb-0">2233783</h5>
+                    <h5 class="mr-2 mb-0">0</h5>
                     </div>
                 </div>
                 <div class="d-flex py-3 border-md-right flex-grow-1 align-items-center justify-content-center p-3 item">
                     <i class="mdi mdi-flag mr-3 icon-lg text-danger"></i>
                     <div class="d-flex flex-column justify-content-around">
                     <small class="mb-1 text-muted">Flagged</small>
-                    <h5 class="mr-2 mb-0">3497843</h5>
+                    <h5 class="mr-2 mb-0">0</h5>
                     </div>
                 </div>
                 </div>
@@ -93,91 +97,63 @@
     </div>
     <div class="row">
     <div class="col-md-12 stretch-card">
+    <div class="content-wrapper">
+    <div class="row">
+    <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
         <div class="card-body">
-            <p class="card-title">Recent Purchases</p>
+            <h4 class="card-title">News List</h4>
+            <p class="card-description">
+            View Added News
+            </p>
             <div class="table-responsive">
-            <table id="recent-purchases-listing" class="table">
+            <?php if($news == null): ?>
+            <div class="jumbotron jumbotron-fluid" style="background: white;">
+                <div class="container">
+                    <h1 class="display-4" style="text-align: center;">Currently There is No News</h1>
+                    <p class="lead" style="text-align: center;">Please Check Later for any News</p>
+                </div>
+            </div>
+            <?php else: ?>
+            <table class="table table-striped">
                 <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Status report</th>
-                    <th>Office</th>
-                    <th>Price</th>
-                    <th>Date</th>
-                    <th>Gross amount</th>
+                    <th>
+                    Name
+                    </th>
+                    <th>
+                    Brief
+                    </th>
+                    <th>
+                    Date
+                    </th>
+                    <th>
+                    Time
+                    </th>
+                    <th>
+                    Approve
+                    </th>
+                    <th>
+                        Edit
+                    </th>
                 </tr>
-                </thead>
                 <tbody>
-                <tr>
-                    <td>Jeremy Ortega</td>
-                    <td>Levelled up</td>
-                    <td>Catalinaborough</td>
-                    <td>$790</td>
-                    <td>06 Jan 2018</td>
-                    <td>$2274253</td>
-                </tr>
-                <tr>
-                    <td>Alvin Fisher</td>
-                    <td>Ui design completed</td>
-                    <td>East Mayra</td>
-                    <td>$23230</td>
-                    <td>18 Jul 2018</td>
-                    <td>$83127</td>
-                </tr>
-                <tr>
-                    <td>Emily Cunningham</td>
-                    <td>support</td>
-                    <td>Makennaton</td>
-                    <td>$939</td>
-                    <td>16 Jul 2018</td>
-                    <td>$29177</td>
-                </tr>
-                <tr>
-                    <td>Minnie Farmer</td>
-                    <td>support</td>
-                    <td>Agustinaborough</td>
-                    <td>$30</td>
-                    <td>30 Apr 2018</td>
-                    <td>$44617</td>
-                </tr>
-                <tr>
-                    <td>Betty Hunt</td>
-                    <td>Ui design not completed</td>
-                    <td>Lake Sandrafort</td>
-                    <td>$571</td>
-                    <td>25 Jun 2018</td>
-                    <td>$78952</td>
-                </tr>
-                <tr>
-                    <td>Myrtie Lambert</td>
-                    <td>Ui design completed</td>
-                    <td>Cassinbury</td>
-                    <td>$36</td>
-                    <td>05 Nov 2018</td>
-                    <td>$36422</td>
-                </tr>
-                <tr>
-                    <td>Jacob Kennedy</td>
-                    <td>New project</td>
-                    <td>Cletaborough</td>
-                    <td>$314</td>
-                    <td>12 Jul 2018</td>
-                    <td>$34167</td>
-                </tr>
-                <tr>
-                    <td>Ernest Wade</td>
-                    <td>Levelled up</td>
-                    <td>West Fidelmouth</td>
-                    <td>$484</td>
-                    <td>08 Sep 2018</td>
-                    <td>$50862</td>
-                </tr>
+                <?php foreach($news as $item) : ?>
+                    <td><?php echo $item['name']?></td>
+                    <td><?php echo $item['brief']?></td>
+                    <td><?php echo $item['date']?></td>
+                    <td><?php echo $item['time']?></td>
+                    <td><?php echo $item['approve']?></td>
+                <?php endforeach?>
                 </tbody>
             </table>
+            <?php endif ?>
             </div>
         </div>
         </div>
+    </div>
+    </div>
+</div>
     </div>
     </div>
     </div>
