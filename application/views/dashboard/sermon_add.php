@@ -7,35 +7,31 @@
                 <p class="card-description">
                     Enter Details of a Sermon
                 </p>
-                <form class="forms-sample">
+                <?php echo form_open_multipart('/sermons-add-item');?>
+                <div class="forms-sample">
                     <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <label >Title</label>
+                    <input type="text" class="form-control" name="title" placeholder="Name">
                     </div>
                     <div class="form-group">
-                    <label for="preacher">Preacher</label>
-                    <input type="text" class="form-control" id="preacher" placeholder="Preacher">
+                    <label >Preacher</label>
+                    <input type="text" class="form-control" name="preacher" placeholder="Preacher">
                     </div>
                     <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="text" class="form-control" id="date" placeholder="01/10/2019">
+                    <label >Date</label>
+                    <input type="text" class="form-control" name="date" placeholder="2019-01-01">
                     </div>
                     <div class="form-group">
-                    <label for="description">Content</label>
-                    <textarea class="form-control" id="description" rows="40"></textarea>
+                    <label >Content</label>
+                    <textarea class="form-control" name="content" rows="5"></textarea>
                     </div>
                     <div class="form-group">
-                    <label>File upload</label>
-                    <input type="file" name="img[]" class="file-upload-default">
-                    <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                        <span class="input-group-append">
-                        <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                        </span>
-                    </div>
+                    <label>Upload PDF</label>
+                    <input type="file" name="userfile" size="20">
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
+                </div>
                 </form>
                 </div>
             </div>

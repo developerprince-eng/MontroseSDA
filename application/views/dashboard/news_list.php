@@ -12,7 +12,7 @@
                 <thead>
                 <tr>
                     <th>
-                    Name
+                    Title
                     </th>
                     <th>
                     Brief
@@ -31,7 +31,32 @@
                     </th>
                 </tr>
                 <tbody>
-
+                <?php foreach($news as $item): ?>
+                    <tr>
+                        <td><?php echo $item['title']?></td>
+                        <td><?php echo $item['brief']?></td>
+                        <td><?php echo $item['date']?></td>
+                        <td><?php echo $item['time']?></td>
+                        <td><?php echo $item['approve']?></td>
+                        <td>
+                        <?php if($item['approve'] == 0): ?>
+                        <?php echo form_open('dashboard/news_delete_item'.$item['nid']) ?>
+                            <input type="submit" value="delete" class="btn btn-danger">
+                        </form>
+                        <?php echo form_open('/dashboard/news_approve_item/'. $item['nid'])?>
+                            <input type="submit" value="approve" class="btn btn-primary">
+                        </form>
+                        <?php else: ?>
+                        <?php echo form_open('dashboard/news_delete_item/'.$item['nid']) ?>
+                            <input type="submit" value="delete" class="btn btn-danger">
+                        </form>
+                        <?php echo form_open('/dashboard/news_suspend_item/'. $item['nid'])?>
+                            <input type="submit" value="suspend" class="btn btn-secondary">
+                        </form>
+                        <?php endif ?>
+                        </td>
+                    </tr>
+                    <?php endforeach ?>
                 </tbody>
             </table>
             </div>

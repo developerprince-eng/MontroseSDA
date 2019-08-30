@@ -273,6 +273,7 @@
                             </div>
                         </div>
                         <?php else: ?>
+                        <?php foreach($sermon as $item): ?>
                         <div class="col-md-10 col-md-offset-1">
                             <div class="custom-col-3 wow flipInX">
                                 <div class="left-col">
@@ -280,15 +281,17 @@
                                 </div>
                                 <div class="mid-col">
                                     <a href="#">
-                                        <h3><?php echo $sermon['title'] ?></h3>
+                                        <h3><?php echo $item['title'] ?></h3>
                                     </a>
                                 </div>
                                 <div class="right-col">
-                                    <a href="#"><i class="fa fa-file-pdf-o"></i></a>
+                                    <a href="<?php echo base_url() ?>/static/pdf/sermons/<?php echo $item['pdf_url'] ?>"><i class="fa fa-file-pdf-o"></i></a>
                                 </div>
                             </div>
                         </div>
+                        <?php endforeach ?>
                         <?php endif?>
+                        
                     </div>
                 </div>
             </section>
@@ -325,21 +328,23 @@
                             <div class="divider-double"></div>
                         </div>
                         <?php if($gallery == null): ?>
-                        <div class="jumbotron jumbotron-fluid" style="background: white;">
-                            <div class="container">
-                                <h1 class="display-4" style="text-align: center;">Currently There are no Pictures</h1>
-                                <p class="lead" style="text-align: center;">Please Check Later for any Pictures or Contact Communications Director</p>
+                            <div class="jumbotron jumbotron-fluid" style="background: white;">
+                                <div class="container">
+                                    <h1 class="display-4" style="text-align: center;">Currently There are no Pictures</h1>
+                                    <p class="lead" style="text-align: center;">Please Check Later for any Pictures or Contact Communications Director</p>
+                                </div>
                             </div>
-                        </div>
-                        <?php else: ?>
-                        <?php foreach($gallery as $item) : ?>
-                        <div id="gallery-isotope" class="col-md-12 wow fadeInUp" data-wow-delay=".25s">
-                            <div class="item small-pic">
-                                <a href="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                <img src="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" alt="">
-                            </div>
-                        </div>
-                        <?php endforeach ?>
+                            <?php else: ?>
+                            <?php foreach($gallery as $item) : ?>
+                                <?php if($item['approve'] == 1): ?>
+                                    <div id="gallery-isotope" class="col-md-12 wow fadeInUp" data-wow-delay=".25s">
+                                        <div class="item small-pic">
+                                            <a href="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                            <img src="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" alt="">
+                                        </div>
+                                    </div>
+                                <?php endif ?>
+                            <?php endforeach ?>
                         <?php endif?>
                     </div>
                 </div>

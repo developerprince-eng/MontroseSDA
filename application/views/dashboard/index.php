@@ -139,11 +139,13 @@
                 </tr>
                 <tbody>
                 <?php foreach($news as $item) : ?>
-                    <td><?php echo $item['name']?></td>
-                    <td><?php echo $item['brief']?></td>
-                    <td><?php echo $item['date']?></td>
-                    <td><?php echo $item['time']?></td>
-                    <td><?php echo $item['approve']?></td>
+                    <tr>
+                        <td><?php echo $item['name']?></td>
+                        <td><?php echo $item['brief']?></td>
+                        <td><?php echo $item['date']?></td>
+                        <td><?php echo $item['time']?></td>
+                        <td><?php echo $item['approve']?></td>
+                    </tr>
                 <?php endforeach?>
                 </tbody>
             </table>

@@ -7,28 +7,24 @@
                 <p class="card-description">
                     Enter Details for new picture
                 </p>
-                <form class="forms-sample">
+                <?php echo form_open_multipart('/gallery-add-item');?>
+                <div class="forms-sample">
                     <div class="form-group">
-                    <label for="name">Title</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <label >Category</label>
+                    <select name="category">
+                        <option value = "church">Church</option>
+                        <option value = "youth">Youth</option>
+                    </select>
                     </div>
                     <div class="form-group">
-                    <label for="category">Category</label>
-                    <input type="text" class="form-control" id="category" placeholder="Brief Description">
-                    </div>
-                    <div class="form-group">
-                    <label>File upload</label>
-                    <input type="file" name="img[]" class="file-upload-default">
-                    <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                        <span class="input-group-append">
-                        <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                        </span>
-                    </div>
+                    <label>Upload Image</label>
+                    <input type="file" name="userfile" size="20">
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
+                </div>
                 </form>
+                </div>
                 </div>
             </div>
             </div>

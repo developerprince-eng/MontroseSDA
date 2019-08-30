@@ -243,8 +243,9 @@ jQuery(document).ready(function() {
     jQuery('.small-pic').each(function() {
         var w = jQuery(this).parent().css("width");
         var wd = (parseInt(w) - 40) / 4;
+        var hd = wd / 1.3333;
         jQuery(this).css("width", wd);
-        jQuery(this).css("height", wd);
+        jQuery(this).css("height", hd);
     });
     jQuery('.wide-pic').each(function() {
         var w = jQuery(this).parent().css("width");

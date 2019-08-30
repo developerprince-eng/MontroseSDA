@@ -19,6 +19,19 @@ class Gallery_model extends CI_Model{
 		$query = $this->db->get_where('gallery', array('gid' => $gid));
 		return $query->row_array();
 	}
+	public function get_gallery_8($gid = FALSE, $limit = FALSE, $offset = FALSE){
+		if($limit){
+			$this->db->limit($limit, $offset);
+		}
+		if ($gid === FALSE) {
+			$this->db->order_by('gid', 'DESC');
+			$query = $this->db->get('gallery', 0, 8);
+			return $query->result_array();
+		}
+
+		$query = $this->db->get_where('gallery', array('gid' => $gid));
+		return $query->row_array();
+	}
 	public function create_gallery(){
 		$gid = md5(url_title($this->input->post('name')));
 

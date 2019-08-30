@@ -86,22 +86,23 @@
                             </div>
                         </div>
                         <?php else: ?>
-                        <?php foreach($sermons as $sermon): ?>
+                        <?php foreach($sermons as $item): ?>
+                        <?php if($item['approve'] == 1): ?>
                         <div class="custom-col-3">
                             <div class="left-col">
                                 <!-- <img src="img/sermons/pic%20(1).jpg" alt="" class="img-responsive"> -->
                             </div>
                             <div class="mid-col">
                                 <a href="#">
-                                    <h3><?php echo $sermon['title']?></h3>
+                                    <h3><?php echo $item['title']?></h3>
                                 </a>
-                                <div class="details"><span>By <a href="#"><?php echo $sermon['preacher'] ?></a>, <?php echo $sermon['date'] ?></div>
+                                <div class="details"><span>By <a href="#"><?php echo $item['preacher'] ?></a>, <?php echo $item['date'] ?></div>
                             </div>
                             <div class="right-col">
-                                <a href="<?php echo base_url(); ?>static/pdf/sermons/<?php echo $sermon['pdf_url'] ?>"><i class="fa fa-file-pdf-o"></i></a>
+                                <a href="<?php echo base_url(); ?>static/pdf/sermons/<?php echo $item['pdf_url'] ?>"><i class="fa fa-file-pdf-o"></i></a>
                             </div>
-
                         </div>
+                        <?php endif ?>
                         <?php endforeach ?>
                         <?php endif ?>
                     </div>

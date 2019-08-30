@@ -23,7 +23,6 @@
                     </div>
 
                     <div class="col-md-9">
-
                         <!-- mainmenu begin -->
                         <div id="mainmenu-container">
                             <ul id="mainmenu">
@@ -79,7 +78,6 @@
                             <li><a href="#" data-filter="*" class="selected">show all</a></li>
                             <li><a href="#" data-filter=".youth">youth</a></li>
                             <li><a href="#" data-filter=".church">church</a></li>
-                            <li><a href="#" data-filter=".gallery">gallery</a></li>
                         </ul>
 
                     </div>
@@ -94,14 +92,16 @@
                     </div>
                     <?php else: ?>
                     <?php foreach($gallery as $item) : ?>
-                    <div id="gallery-isotope" class="zoom-gallery col-md-12">
-                        <div class="item small-pic <?php echo $item['category']?>">
-                            <a href="<?php echo base_url() ?>static/img/gallery/<?php echo $item['title']?>"><span class="overlay"></span></a>
-                            <img src="<?php echo base_url() ?>static/img/gallery/<?php echo $item['title']?>" alt="">
+                    <?php if($item['approve'] == 1): ?>
+                        <div id="gallery-isotope" class="zoom-gallery col-md-12">
+                            <div class="item small-pic <?php echo $item['category']?>">
+                                <a href="<?php echo base_url() ?>static/img/gallery/<?php echo $item['title']?>"><span class="overlay"></span></a>
+                                <img src="<?php echo base_url() ?>static/img/gallery/<?php echo $item['title']?>" alt="">
+                            </div>
                         </div>
+                    <?php endif ?>
                     <?php endforeach ?>
                     <?php endif ?>
-                    </div>
                 </div>
             </div>
         </div>

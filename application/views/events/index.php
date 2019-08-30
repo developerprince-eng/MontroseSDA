@@ -73,6 +73,7 @@
                 </div>
                 <?php else: ?>
                 <?php foreach($event as $item) : ?>
+                    <?php if($item['approve'] == 1): ?>
                     <!-- event item begin -->
                     <div class="col-md-6 event-item">
                         <div class="inner">
@@ -92,6 +93,7 @@
                             </span>
                         </div>
                     </div>
+                    <?php endif ?>
                     <!-- event item close -->
                 <?php endforeach ?>
                 <?php endif ?>

@@ -3,9 +3,11 @@ class Event_model extends CI_Model{
 	public function __construct(){
 		$this->load->database();
 	}
+	
 	public function insert($event){
 		$this->db->insert('events', $event);
 	}
+
 	public function get_events($eid = FALSE, $limit = FALSE, $offset = FALSE){
 		if($limit){
 			$this->db->limit($limit, $offset);
@@ -18,6 +20,7 @@ class Event_model extends CI_Model{
 		$query = $this->db->get_where('events', array('eid' => $eid));
 		return $query->row_array();
 	}
+
 	public function create_event(){
 		$eid = md5(url_title($this->input->post('name')));
 		$data = array(
@@ -30,9 +33,11 @@ class Event_model extends CI_Model{
 		);
 		return $this->db->insert('events', $data);
 	}
+
 	public function get_events_num(){
 		return $this->db->count_all('events');
 	}
+
 	public function delete($id){
 		$this->db->where('eid', $id);
 		$this->db->delete('events');

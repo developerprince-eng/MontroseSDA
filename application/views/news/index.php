@@ -73,11 +73,12 @@
                 </div>
                 <?php else: ?>
                 <?php foreach($news as $item) : ?>
+                    <?php if($item['approve'] == 1): ?>
                     <!-- event item begin -->
                     <div class="col-md-6 event-item">
                         <div class="inner">
                             <div class="left-col">
-                                <img src="<?php echo base_url() ?>/static/img/events/<?php echo $item['img_url'] ?>" alt="">
+                                <img src="<?php echo base_url() ?>/static/img/news/<?php echo $item['img_url'] ?>" alt="">
                             </div>
                             <div class="right-col">
                                 <span class="date"><?php echo $item['date'] ?></span>
@@ -86,12 +87,13 @@
                         </div>
                         <div class="desc">
                             <a href="#">
-                                <h3><?php echo $item['name'] ?></h3>
+                                <h3><?php echo $item['title'] ?></h3>
                             </a>
                             <span class="text"><?php echo $item['brief'] ?>
                             </span>
                         </div>
                     </div>
+                    <?php endif ?>
                     <!-- event item close -->
                 <?php endforeach ?>
                 <?php endif ?>

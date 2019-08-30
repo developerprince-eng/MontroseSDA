@@ -7,39 +7,35 @@
                 <p class="card-description">
                     Enter News Item
                 </p>
-                <form class="forms-sample">
+                <?php echo form_open_multipart('/news-add-item');?>
+                <div class="forms-sample">
                     <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name">
+                    <label >Title</label>
+                    <input type="text" class="form-control" name="title" placeholder="Name">
                     </div>
                     <div class="form-group">
-                    <label for="brief">Brief</label>
-                    <input type="text" class="form-control" id="brief" placeholder="Brief Description">
+                    <label >Brief</label>
+                    <input type="text" class="form-control" name="brief" placeholder="Brief Description">
                     </div>
                     <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="text" class="form-control" id="date" placeholder="01/10/2019">
+                    <label >Date</label>
+                    <input type="text" class="form-control" name="date" placeholder="2019-01-01">
                     </div>
                     <div class="form-group">
-                    <label for="time">Time</label>
-                    <input type="text" class="form-control" id="time" placeholder="00:00:00">
+                    <label >Time</label>
+                    <input type="text" class="form-control" name="time" placeholder="00:00:00">
                     </div>
                     <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea class="form-control" id="description" rows="5"></textarea>
+                    <label >Content</label>
+                    <textarea class="form-control" name="content" rows="5"></textarea>
                     </div>
                     <div class="form-group">
-                    <label>File upload</label>
-                    <input type="file" name="img[]" class="file-upload-default">
-                    <div class="input-group col-xs-12">
-                        <input type="text" class="form-control file-upload-info" disabled placeholder="Upload Image">
-                        <span class="input-group-append">
-                        <button class="file-upload-browse btn btn-primary" type="button">Upload</button>
-                        </span>
-                    </div>
+                    <label>Upload Image</label>
+                    <input type="file" name="userfile" size="20">
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                     <button class="btn btn-light">Cancel</button>
+                </div>
                 </form>
                 </div>
             </div>

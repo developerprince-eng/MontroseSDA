@@ -32,7 +32,32 @@
                 </tr>
 
                 <tbody>
-
+                <?php foreach($sermons as $item): ?>
+                    <tr>
+                    <td><?php echo $item['title']?></td>
+                    <td><?php echo $item['preacher']?></td>
+                    <td><?php echo $item['date']?></td>
+                    <td><?php echo $item['pdf_url']?></td>
+                    <td><?php echo $item['approve']?></td>
+                    <td>
+                        <?php if($item['approve'] == 0): ?>
+                        <?php echo form_open('dashboard/sermons_delete_item'.$item['sid']) ?>
+                            <input type="submit" value="delete" class="btn btn-danger">
+                        </form>
+                        <?php echo form_open('/dashboard/sermons_approve_item/'. $item['sid'])?>
+                            <input type="submit" value="approve" class="btn btn-primary">
+                        </form>
+                        <?php else: ?>
+                        <?php echo form_open('dashboard/sermons_delete_item/'.$item['sid']) ?>
+                            <input type="submit" value="delete" class="btn btn-danger">
+                        </form>
+                        <?php echo form_open('/dashboard/sermons_suspend_item/'. $item['sid'])?>
+                            <input type="submit" value="suspend" class="btn btn-secondary">
+                        </form>
+                        <?php endif ?>
+                    </td>
+                    </tr>
+                <?php endforeach ?>
                 </tbody>
             </table>
             </div>

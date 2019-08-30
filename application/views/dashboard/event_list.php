@@ -30,9 +30,33 @@
                         Edit
                     </th>
                 </tr>
-
                 <tbody>
-
+                    <?php foreach($event as $item): ?>
+                    <tr>
+                        <td><?php echo $item['name']?></td>
+                        <td><?php echo $item['brief']?></td>
+                        <td><?php echo $item['date']?></td>
+                        <td><?php echo $item['time']?></td>
+                        <td><?php echo $item['approve']?></td>
+                        <td>
+                        <?php if($item['approve'] == 0): ?>
+                        <?php echo form_open('dashboard/event_delete_item'.$item['eid']) ?>
+                            <input type="submit" value="delete" class="btn btn-danger">
+                        </form>
+                        <?php echo form_open('/dashboard/event_approve_item/'. $item['eid'])?>
+                            <input type="submit" value="approve" class="btn btn-primary">
+                        </form>
+                        <?php else: ?>
+                        <?php echo form_open('dashboard/event_delete_item/'.$item['eid']) ?>
+                            <input type="submit" value="delete" class="btn btn-danger">
+                        </form>
+                        <?php echo form_open('/dashboard/event_suspend_item/'. $item['eid'])?>
+                            <input type="submit" value="suspend" class="btn btn-secondary">
+                        </form>
+                        <?php endif ?>
+                        </td>
+                    </tr>
+                    <?php endforeach ?>
                 </tbody>
             </table>
             </div>
