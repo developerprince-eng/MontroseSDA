@@ -343,7 +343,6 @@
                                         <a href="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
                                         <img src="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" alt="">
                                     </div>
-                                    </div>
                                 <?php endif ?>
                             <?php endforeach ?>
                             </div>
