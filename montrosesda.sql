@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 29, 2019 at 05:47 AM
+-- Generation Time: Aug 30, 2019 at 05:11 PM
 -- Server version: 8.0.16
 -- PHP Version: 7.2.20
 
@@ -65,6 +65,7 @@ CREATE TABLE `news` (
   `content` text NOT NULL,
   `date` date NOT NULL,
   `time` time NOT NULL,
+  `img_url` varchar(255) NOT NULL,
   `approve` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -78,9 +79,8 @@ CREATE TABLE `sermons` (
   `sid` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `content` text NOT NULL,
-  `preacher` varchar(255) NOT NULL,
+  `preacher` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci DEFAULT NULL,
   `date` date NOT NULL,
-  `img_url` varchar(255) NOT NULL,
   `pdf_url` varchar(255) NOT NULL,
   `approve` tinyint(4) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -176,25 +176,25 @@ ALTER TABLE `visitors`
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `eid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `gid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `gid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `nid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `sermons`
 --
 ALTER TABLE `sermons`
-  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `users`
