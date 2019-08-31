@@ -7,7 +7,6 @@
                 <span id="menu-btn"></span>
                 <div class="row">
                     <div class="col-md-3">
-
                         <!-- logo begin -->
                         <div id="logo">
                             <div class="inner">
@@ -15,11 +14,9 @@
                                     <!--<img src="<?php echo base_url() ?>static/img/logo.png" alt="" class="logo-1">-->
                                     <img src="<?php echo base_url() ?>static/img/logo-2.png" alt="" class="logo-2">
                                 </a>
-
                             </div>
                         </div>
                         <!-- logo close -->
-
                     </div>
 
                     <div class="col-md-9">
@@ -49,11 +46,9 @@
                             <a href="#"><i class="fa fa-envelope-o"></i></a>
                         </div>
                         <!-- social icons close -->
-
                     </div>
                 </div>
             </div>
-
         </header>
         <!-- header close -->
 
@@ -79,7 +74,6 @@
                             <li><a href="#" data-filter=".youth">youth</a></li>
                             <li><a href="#" data-filter=".church">church</a></li>
                         </ul>
-
                     </div>
                 </div>
                 <div class="row">
@@ -91,16 +85,16 @@
                         </div>
                     </div>
                     <?php else: ?>
+                    <div id="gallery-isotope" class="zoom-gallery col-md-12">
                     <?php foreach($gallery as $item) : ?>
-                    <?php if($item['approve'] == 1): ?>
-                        <div id="gallery-isotope" class="zoom-gallery col-md-12">
-                            <div class="item small-pic <?php echo $item['category']?>">
-                                <a href="<?php echo base_url() ?>static/img/gallery/<?php echo $item['title']?>"><span class="overlay"></span></a>
-                                <img src="<?php echo base_url() ?>static/img/gallery/<?php echo $item['title']?>" alt="">
-                            </div>
+                    <?php if($item['approve'] == 1): ?>    
+                        <div class="item small-pic <?php echo $item['category']?>">
+                            <a href="<?php echo base_url() ?>static/img/gallery/<?php echo $item['title']?>"><span class="overlay"></span></a>
+                            <img src="<?php echo base_url() ?>static/img/gallery/<?php echo $item['title']?>" alt="">
                         </div>
                     <?php endif ?>
                     <?php endforeach ?>
+                    </div>
                     <?php endif ?>
                 </div>
             </div>
@@ -108,8 +102,6 @@
         <!-- content close -->
         <!-- footer begin -->
         <footer>
-
-
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -128,7 +120,6 @@
                     </div>
                 </div>
             </div>
-
         </footer>
         <!-- footer close -->
     </div>

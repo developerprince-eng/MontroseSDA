@@ -327,6 +327,7 @@
                             <h2>From Gallery</h2>
                             <div class="divider-double"></div>
                         </div>
+                        
                         <?php if($gallery == null): ?>
                             <div class="jumbotron jumbotron-fluid" style="background: white;">
                                 <div class="container">
@@ -335,16 +336,17 @@
                                 </div>
                             </div>
                             <?php else: ?>
+                            <div id="gallery-isotope" class="col-md-12 wow fadeInUp" data-wow-delay=".25s">
                             <?php foreach($gallery as $item) : ?>
                                 <?php if($item['approve'] == 1): ?>
-                                    <div id="gallery-isotope" class="col-md-12 wow fadeInUp" data-wow-delay=".25s">
-                                        <div class="item small-pic">
-                                            <a href="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
-                                            <img src="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" alt="">
-                                        </div>
+                                    <div class="item small-pic">
+                                        <a href="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
+                                        <img src="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" alt="">
+                                    </div>
                                     </div>
                                 <?php endif ?>
                             <?php endforeach ?>
+                            </div>
                         <?php endif?>
                     </div>
                 </div>

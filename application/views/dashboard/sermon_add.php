@@ -27,10 +27,10 @@
                     </div>
                     <div class="form-group">
                     <label>Upload PDF</label>
-                    <input type="file" name="userfile" size="20">
+                    <input type="file" name="userfile" class="btn-primary btn-block" size="20">
                     </div>
                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                    <button class="btn btn-light">Cancel</button>
+                    <a href="<?php echo base_url() ?>sermons-list" class="btn btn-light">Cancel</a>
                 </div>
                 </form>
                 </div>

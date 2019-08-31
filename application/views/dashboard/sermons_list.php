@@ -42,17 +42,18 @@
                     <td>
                         <?php if($item['approve'] == 0): ?>
                         <?php echo form_open('dashboard/sermons_delete_item'.$item['sid']) ?>
-                            <input type="submit" value="delete" class="btn btn-danger">
+                            <input type="submit" value="delete" class="btn btn-danger btn-block">
                         </form>
+                        <br>
                         <?php echo form_open('/dashboard/sermons_approve_item/'. $item['sid'])?>
-                            <input type="submit" value="approve" class="btn btn-primary">
+                            <input type="submit" value="approve" class="btn btn-primary btn-block">
                         </form>
                         <?php else: ?>
                         <?php echo form_open('dashboard/sermons_delete_item/'.$item['sid']) ?>
-                            <input type="submit" value="delete" class="btn btn-danger">
+                            <input type="submit" value="delete" class="btn btn-danger btn-block">
                         </form>
                         <?php echo form_open('/dashboard/sermons_suspend_item/'. $item['sid'])?>
-                            <input type="submit" value="suspend" class="btn btn-secondary">
+                            <input type="submit" value="suspend" class="btn btn-secondary btn-block">
                         </form>
                         <?php endif ?>
                     </td>
