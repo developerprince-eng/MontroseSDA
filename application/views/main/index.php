@@ -12,7 +12,7 @@
                         <div id="logo">
                             <div class="inner">
                                 <a href="/">
-                                    <!--<img src="<?php echo base_url() ?>/static/img/logo.png" alt="" class="logo-1">-->
+                                    <img src="<?php echo base_url() ?>static/img/logo-white.png" alt="" class="logo-1">  
                                     <img src="<?php echo base_url() ?>/static/img/logo-2.png" alt="" class="logo-2">
                                 </a>
 
@@ -42,15 +42,6 @@
                         </div>
                         <!-- mainmenu close -->
 
-                        <!-- social icons -->
-                        <div class="social">
-                            <a href="https://www.facebook.com/montrosesda/"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-envelope-o"></i></a>
-                        </div>
-                        <!-- social icons close -->
 
                     </div>
                 </div>
@@ -342,7 +333,7 @@
                                     <div class="item small-pic">
                                         <a href="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" data-gal="prettyPhoto[galllery]"><span class="overlay"></span></a>
                                         <img src="<?php echo base_url() ?>/static/img/gallery/<?php echo $item['title']?>" alt="">
-                                    </div>
+                                    </div>  
                                 <?php endif ?>
                             <?php endforeach ?>
                             </div>
@@ -389,6 +380,7 @@
                     <div class="col-md-6">
                         <nav>
                             <ul>
+                                <li><a href="https://www.facebook.com/montrosesda/"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="<?php echo base_url() ?>">Home</a></li>
                                 <li><a href="<?php echo base_url() ?>">About Us</a></li>
                                 <li><a href="<?php echo base_url() ?>events">Events</a></li>

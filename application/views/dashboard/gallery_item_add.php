@@ -10,11 +10,11 @@
                 <?php echo form_open_multipart('/gallery-add-item');?>
                 <div class="forms-sample">
                     <div class="form-group">
-                    <label >Category</label>
+                   <label >Category</label>
                     <select name="category">
                         <option value = "church">Church</option>
                         <option value = "youth">Youth</option>
-                    </select>
+                    </select> 
                     </div>
                     <div class="form-group">
                     <label>Upload Image</label>
@@ -26,7 +26,6 @@
                 </form>
                 </div>
                 </div>
-            </div>
             </div>
     </div>
 </div>

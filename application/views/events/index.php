@@ -11,6 +11,7 @@
                         <div id="logo">
                             <div class="inner">
                                 <a href="<?php echo base_url() ?>">
+                                    <img src="<?php echo base_url() ?>static/img/logo-white.png" alt="" class="logo-1">  
                                     <img src="<?php echo base_url() ?>/static/img/logo-2.png" alt="" class="logo-2">
                                 </a>
                             </div>
@@ -34,15 +35,6 @@
                             </ul>
                         </div>
                         <!-- mainmenu close -->
-                        <!-- social icons -->
-                        <div class="social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-envelope-o"></i></a>
-                        </div>
-                        <!-- social icons close -->
                     </div>
                 </div>
             </div>
@@ -111,6 +103,7 @@
                     <div class="col-md-6">
                         <nav>
                             <ul>
+                                <li><a href="https://www.facebook.com/montrosesda/"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">About Us</a></li>
                                 <li><a href="#">Events</a></li>

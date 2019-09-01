@@ -9,7 +9,7 @@
                         <div id="logo">
                             <div class="inner">
                                 <a href="<?php echo base_url() ?>">
-                                    <!--<img src="img/logo.png" alt="" class="logo-1">-->
+                                    <img src="<?php echo base_url() ?>static/img/logo-white.png" alt="" class="logo-1">
                                     <img src="<?php echo base_url() ?>static/img/logo-2.png" alt="" class="logo-2">
                                 </a>
 
@@ -34,14 +34,6 @@
                                 <li><a href="<?php echo base_url() ?>gallery">Gallery</a></li>
                                 <li><a href="<?php echo base_url() ?>contact">Contact</a></li>
                             </ul>
-                        </div>
-
-                        <div class="social">
-                            <a href="https://www.facebook.com/montrosesda/"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-rss"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-envelope-o"></i></a>
                         </div>
                         <!-- mainmenu close -->
                     </div>
@@ -142,6 +134,7 @@
                     <div class="col-md-6">
                         <nav>
                             <ul>
+                                <li><a href="https://www.facebook.com/montrosesda/"><i class="fa fa-facebook"></i></a></li>
                                 <li><a href="<?php echo base_url() ?>">Home</a></li>
                                 <li><a href="<?php echo base_url() ?>">About Us</a></li>
                                 <li><a href="<?php echo base_url() ?>events">Events</a></li>
