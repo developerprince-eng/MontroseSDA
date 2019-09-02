@@ -115,7 +115,9 @@ switch (ENVIRONMENT)
  * NO TRAILING SLASH!
  */
 	$application_folder = 'application';
-
+    
+	include_once './vendor/autoload.php';
+	
 /*
  *---------------------------------------------------------------
  * VIEW DIRECTORY NAME

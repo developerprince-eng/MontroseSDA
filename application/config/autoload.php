@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $autoload['packages'] = array('form_validation', 'session','database', 'pagination');

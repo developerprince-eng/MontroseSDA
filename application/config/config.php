@@ -1,7 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$dotenv = Dotenv\Dotenv::create(__DIR__);
 
-$config['base_url'] = 'http://localhost:8080/montrosesda';
+$dotenv->load();
+
+$base_url = getenv('BASE_URL');
+$config['base_url'] = $base_url;
 
 $config['index_page'] = 'index.php';
 

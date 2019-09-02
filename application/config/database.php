@@ -1,15 +1,21 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
+$dotenv = Dotenv\Dotenv::create(__DIR__);
 
+$dotenv->load();
+
+$username = getenv('DATABASE_USER');
+$password = getenv('DATABASE_PASSWORD');
+$database = getenv('DATABASE');
 $active_group = 'default';
 $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
 	'hostname' => 'localhost',
-	'username' => 'montrosesdaorg',
-	'password' => 'M0ntros3Sd4$#',
-	'database' => 'montrosesda',
+	'username' => $username,
+	'password' => $password,
+	'database' => $database,
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
