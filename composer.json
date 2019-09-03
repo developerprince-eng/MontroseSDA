@@ -12,7 +12,8 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"vlucas/phpdotenv": "^3.5"
+		"vlucas/phpdotenv": "^3.5",
+		"paynow/php-sdk": "^1.0"
 	},
 	"suggest": {
 		"paragonie/random_compat": "Provides better randomness in PHP 5.x"
