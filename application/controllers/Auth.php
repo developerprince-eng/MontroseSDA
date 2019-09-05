@@ -1,6 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
+
+require '././vendor/autoload.php';
+
+use Bcrypt\Bcrypt;
+
+
 class Auth extends CI_Controller {
 	public function index()
 	{
@@ -15,25 +21,19 @@ class Auth extends CI_Controller {
 		if($this->form_validation->run() === FALSE){
 			$this->load->view('auth/index');
 		}else {
-
 			
-			$email = $this->input->post('email');
-			$enc_password = md5($this->input->post('password'));
+			$user = $this->user_model->login();
 
-			$user_id = $this->user_model->login($email, $enc_password);
-
-			if(!empty($user_id)){
+			if(!empty($user)){
 				//Create Session
-
-				$this->session->set_userdata('username', $user_id['username']);
-				$this->session->set_userdata('name', $user_id['name']);
-				$this->session->set_userdata('surname', $user_id['surname']);
-				$this->session->set_userdata('profile_img', $user_id['profile_img']);
-				$this->session->set_userdata('role', $user_id['role']);
+				$this->session->set_userdata('username', $user['username']);
+				$this->session->set_userdata('name', $user['name']);
+				$this->session->set_userdata('surname', $user['surname']);
+				$this->session->set_userdata('profile_img', $user['profile_img']);
+				$this->session->set_userdata('role', $user['role']);
 				$this->session->set_userdata('logged_in', true);
 				$this->session->set_flashdata('login_successful','Login in Successful');
-				$data['user'] = $user_id;
-				
+				$data['user'] = $user;
 				redirect('dashboard', $data);
 			}else{
 				$this->session->set_flashdata('login_failed','Login in invalid check email & password');
@@ -69,10 +69,8 @@ class Auth extends CI_Controller {
 		if($this->form_validation->run() === FALSE){;
 			$this->load->view('auth/register');
 		}else{
-			//Encrpyt password with MD5 standards
-			$enc_password = md5($this->input->post('password'));
-
-			$this->user_model->register($enc_password);
+			
+			$this->user_model->register();
 
 			$this->session->set_flashdata('user_registered','You are now Registered and Login');
 

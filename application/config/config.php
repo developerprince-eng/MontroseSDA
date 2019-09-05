@@ -1,11 +1,12 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-$dotenv = Dotenv\Dotenv::create(__DIR__);
+include_once '././loadenv.php';
 
-$dotenv->load();
+$env = new LoadEnv;
 
-$base_url = getenv('BASE_URL');
-$config['base_url'] = $base_url;
+$env_variable = $env->Getdotenv();
+
+$config['base_url'] = $env_variable['base_url'];
 
 $config['index_page'] = 'index.php';
 
