@@ -9,7 +9,6 @@ class User_model extends CI_Model{
         $this->load->database();
     }
     public function login (){
-
         $email = $this->input->post('email');
         $password = $this->input->post('password');
         $md5_password = md5($password);
