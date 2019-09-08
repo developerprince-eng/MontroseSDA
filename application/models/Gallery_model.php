@@ -38,7 +38,7 @@ class Gallery_model extends CI_Model{
 		$data = array(
             'gid' => $gid,
 			'name' => $this->input->post('name'),
-			'category' => $this->input->post('description'),
+			'category' => $this->input->post('category'),
 		);
 
 		return $this->db->insert('gallery', $data);

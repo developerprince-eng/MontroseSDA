@@ -77,11 +77,14 @@ class Dashboard extends CI_Controller {
 			if($this->upload->do_upload('userfile'))
 			{
 				$file_name = $this->upload->data();
+				$day = $this->input->post('day');
+				$month = $this->input->post('month');
+				$year = $this->input->post('year');
 				$event = array(
 					'name' => $this->input->post('name'),
 					'brief' => $this->input->post('brief'),
 					'description' => $this->input->post('description'),
-					'date' => $this->input->post('date'),
+					'date' => $day.' '.$month.' '.$year,
 					'time' => $this->input->post('time'),
 					'img_url' => $file_name['file_name'],
 				);
@@ -264,11 +267,14 @@ class Dashboard extends CI_Controller {
 			if($this->upload->do_upload('userfile'))
 			{
 				$file_name = $this->upload->data();
+				$day = $this->input->post('day');
+				$month = $this->input->post('month');
+				$year = $this->input->post('year');
 				$news = array(
 					'title' => $this->input->post('title'),
 					'brief' => $this->input->post('brief'),
 					'content' => $this->input->post('content'),
-					'date' => $this->input->post('date'),
+					'date' => $day.' '.$month.' '.$year,
 					'time' => $this->input->post('time'),
 					'img_url' => $file_name['file_name'],
 				);
@@ -353,11 +359,14 @@ class Dashboard extends CI_Controller {
 			if($this->upload->do_upload('userfile'))
 			{
 				$file_name = $this->upload->data();
+				$day = $this->input->post('day');
+				$month = $this->input->post('month');
+				$year = $this->input->post('year');
 				$sermon = array(
 					'title' => $this->input->post('title'),
 					'preacher' => $this->input->post('preacehr'),
 					'content' => $this->input->post('content'),
-					'date' => $this->input->post('date'),
+					'date' => $day.' '.$month.' '.$year,
 					'pdf_url' => $file_name['file_name'],
 				);
 				$this->load->model('sermons_model');

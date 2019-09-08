@@ -21,13 +21,16 @@ class News_model extends CI_Model{
 	}
 	public function create_new(){
 		$nid = md5(url_title($this->input->post('name')));
+		$day = $this->input->post('day');
+		$month = $this->input->post('month');
+		$year = $this->input->post('year');
 
 		$data = array(
             'nid' => $nid,
 			'title' => $this->input->post('title'),
 			'brief' => $this->input->post('brief'),
             'content' => $this->input->post('content'),
-            'date' => $this->input->post('date'),
+            'date' => $day.' '.$month.' '.$year,
             'time' => $this->input->post('time')
 		);
 
