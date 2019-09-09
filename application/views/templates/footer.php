@@ -17,6 +17,5 @@
     <!-- SLIDER REVOLUTION SCRIPTS  -->
     <script type="text/javascript" src="<?php echo base_url(); ?>static/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>static/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="<?php echo base_url(); ?>static/js/rev-setting-1"></script>
 </body>
 </html>

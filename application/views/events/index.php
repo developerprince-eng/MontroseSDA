@@ -73,7 +73,9 @@
                                 <img src="<?php echo base_url() ?>/static/img/events/<?php echo $item['img_url'] ?>" alt="">
                             </div>
                             <div class="right-col">
-                                <span class="date"><?php echo $item['date'] ?></span>
+                                <?php $explode = explode(" ", $item['date']); ?>
+                                <span class="date"><?php echo $explode[0] ?></span>
+                                <span class="month"><?php echo $explode[1] ?></span>
                                 <span class="time"><?php echo $item['time'] ?></span>
                             </div>
                         </div>

@@ -295,9 +295,10 @@
                         "This is what the Lord Almighty says: “Give careful thought to your ways. 8 Go up into the mountains and bring down timber and build my house, so that I may take pleasure in it and be honored,” says the Lord."
                       </p>
                       <h3 class="text-align: center">Donation Account</h3>
-                      <p><strong>Bank: </strong></p>
-                      <p><strong>Branch: </strong> </p>
-                      <p><strong>Account Number: XXXXXX XXXXXX XXXXXXXXX</strong></p>
+                      <p><strong>Bank: FBC</strong></p>
+                      <p><strong>Branch: J.Moyo</strong> </p>
+                      <p><strong>Branch Code: 8305</strong> </p>
+                      <p><strong>Account Number: 1020157040111</strong></p>
                     </div>
                     <div class="col col-lg-6 col-md-6 col-sm-12">
                         <h2>Donate</h2>
