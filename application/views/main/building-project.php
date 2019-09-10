@@ -302,19 +302,19 @@
                     </div>
                     <div class="col col-lg-6 col-md-6 col-sm-12">
                         <h2>Donate</h2>
-                        <form>
+                        <?php echo form_open('/donate'); ?>
                             <div class="form-group">
                               <label for="email">Email address</label>
-                              <input type="email" class="form-control churchbuilding-form-input" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                              <input type="email" class="form-control churchbuilding-form-input" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email">
                               <small id="emailHelp" class="form-text text-muted ">We'll never share your email with anyone else.</small>
                             </div>
                             <div class="form-group">
                               <label for="amount">Amount USD</label>
-                              <input type="number" class="form-control churchbuilding-form-input" id="amount" placeholder="10">
+                              <input type="number" class="form-control churchbuilding-form-input" id="amount" name="amount" placeholder="10">
                             </div>
                             <br>
                             <button type="submit" class="btn btn-secondary btn-lg btn-block churchbuilding-form-input" disabled>Donate</button>
-                          </form>
+                        </form>
                     </div>
                   </div>
                 </div>
