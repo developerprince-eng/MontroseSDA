@@ -15,6 +15,8 @@ class LoadEnv
         $base_url = getenv('BASE_URL');
         $database_user = getenv('DATABASE_USER');
         $database_password = getenv('DATABASE_PASSWORD');
+        $paynow_integration_id = getenv('PAYNOW_INTEGRATION_ID');
+        $paynow_key = getenv('PAYNOW_KEY');
 
         $env_variables['getvariables'] = array(
             'active_group' => $active_group,
@@ -24,7 +26,9 @@ class LoadEnv
             'database_url' => $database_url,
             'base_url' => $base_url,
             'database_user' => $database_user,
-            'database_password' => $database_password
+            'database_password' => $database_password,
+            'paynow_integration_id' => $paynow_integration_id,
+            'paynow_key' => $paynow_key
         );
 
         return $env_variables['getvariables'];
