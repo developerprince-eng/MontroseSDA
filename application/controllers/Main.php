@@ -7,45 +7,16 @@ class Main extends CI_Controller {
 	public function index()
 	{
 		$this->visitors_model->update();
-		$data['gallery'] =	$this->gallery_model->get_gallery_8();
-		$data['sermon'] = $this->sermons_model->get_last_sermon();
 		$this->load->view('templates/header');
-		$this->load->view('main/index', $data);
+		$this->load->view('main/index');
 		$this->load->view('templates/footer');
 	}
 
-	public function buildingproject()
+	public function about()
 	{
 		$this->load->view('templates/header');
-		$this->load->view('main/building-project');
+		$this->load->view('main/about');
 		$this->load->view('templates/footer');
-	}
-
-	public function donate(){
-		$env = new LoadEnv;
-
-		$env_variable = $env->Getdotenv();
-		$paynow_integration_id = $env_variable['paynow_integration_id'];
-		$paynow_key = $env_variable['paynow_key'];
-
-		$this->load->helper(array('form', 'url'));
-
-		$this->load->library('form_validation');
-		
-		$paynow = new Paynow\Payments\Paynow(
-			$paynow_integration_id,
-			$paynow_key,
-			NULL,
-			NULL
-		);
-		$invoice = 'Invoice'.rand(2, 8);
-		$payment = $paynow->createPayment($invoice, $this->input->post('email'));
-		$payment->add('Donate', $this->input->post('amount'));
-		$response = $paynow->send($payment);
-		if($response->sucess()){
-			redirect('/church-building');
-		}
-		redirect('/');
 	}
 
 	public function contact()
@@ -55,11 +26,26 @@ class Main extends CI_Controller {
 		$this->load->view('templates/footer');
 	}
 
-	public function gallery()
+	public function events()
 	{
 		$data['gallery'] = $this->gallery_model->get_gallery();
 		$this->load->view('templates/header');
-		$this->load->view('main/gallery', $data);
+		$this->load->view('main/events', $data);
+		$this->load->view('templates/footer');
+	}
+
+	public function ministry()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('main/ministry');
+		$this->load->view('templates/footer');
+	}
+
+	public function sermons()
+	{
+		$data['sermons'] = $this->sermons_model->get_sermons();
+		$this->load->view('templates/header');
+		$this->load->view('main/sermons', $data);
 		$this->load->view('templates/footer');
 	}
 }
