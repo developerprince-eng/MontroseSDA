@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>MontroseSDA Dashboard</title>
+  <title>BYOCityCenterChurch Dashboard</title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="<?php echo base_url(); ?>static/dashboard/vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="<?php echo base_url(); ?>static/dashboard/vendors/base/vendor.bundle.base.css">
@@ -23,7 +23,7 @@
     <nav class="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
             <div class="navbar-brand-wrapper d-flex justify-content-center">
         <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">  
-          <a class="navbar-brand brand-logo" href="index"><img src="<?php echo base_url(); ?>static/dashboard/images/logo.png" alt="logo"/></a>
+          <a class="navbar-brand brand-logo" href="index"><img style="width: 100%; height: Auto;" src="<?php echo base_url(); ?>static/dashboard/images/logo.png" alt="logo"/></a>
           <a class="navbar-brand brand-logo-mini" href="index"><h1>M</h1></a>
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-sort-variant"></span>
@@ -91,7 +91,7 @@
               </ul>
             </div>
           </li>
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#news" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi mdi-blur-linear menu-icon"></i>
               <span class="menu-title">News</span>
@@ -103,8 +103,8 @@
                 <li class="nav-item"> <a class="nav-link" href="news-add"> Add News </a></li>
               </ul>
             </div>
-          </li>
-          <li class="nav-item">
+          </li> -->
+          <!-- <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#gallery" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi mdi-panorama menu-icon"></i>
               <span class="menu-title">Gallery</span>
@@ -116,7 +116,7 @@
                 <li class="nav-item"> <a class="nav-link" href="gallery-item-add"> Add Picture </a></li>
               </ul>
             </div>
-          </li>
+          </li> -->
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#sermons" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi mdi-book-open-variant menu-icon"></i>

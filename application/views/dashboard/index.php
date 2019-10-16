@@ -102,16 +102,16 @@
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
         <div class="card-body">
-            <h4 class="card-title">News List</h4>
+            <h4 class="card-title">Events List</h4>
             <p class="card-description">
-            View Added News
+            View Added Events
             </p>
             <div class="table-responsive">
-            <?php if($news == null): ?>
+            <?php if($events == null): ?>
             <div class="jumbotron jumbotron-fluid" style="background: white;">
                 <div class="container">
-                    <h1 class="display-4" style="text-align: center;">Currently There is No News</h1>
-                    <p class="lead" style="text-align: center;">Please Check Later for any News</p>
+                    <h1 class="display-4" style="text-align: center;">Currently There is No Events</h1>
+                    <p class="lead" style="text-align: center;">Please Check Later for any Events</p>
                 </div>
             </div>
             <?php else: ?>
@@ -138,7 +138,7 @@
                     </th>
                 </tr>
                 <tbody>
-                <?php foreach($news as $item) : ?>
+                <?php foreach($events as $item) : ?>
                     <tr>
                         <td><?php echo $item['name']?></td>
                         <td><?php echo $item['brief']?></td>

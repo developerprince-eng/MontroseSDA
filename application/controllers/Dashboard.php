@@ -10,7 +10,7 @@ class Dashboard extends CI_Controller {
 		}
 		$data['sermons'] = $this->sermons_model->get_sermons();
 		$data['visits'] = $this->visitors_model->get_visits();
-		$data['news'] = $this->news_model->get_news();
+		$data['events'] = $this->event_model->get_events();
 		$this->load->view('templates/dashboard-header');
 		$this->load->view('dashboard/index', $data);
 		$this->load->view('templates/dashboard-footer');
