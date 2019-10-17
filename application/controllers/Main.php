@@ -28,7 +28,7 @@ class Main extends CI_Controller {
 
 	public function events()
 	{
-		$data['gallery'] = $this->gallery_model->get_gallery();
+		$data['event'] = $this->event_model->get_events();
 		$this->load->view('templates/header');
 		$this->load->view('main/events', $data);
 		$this->load->view('templates/footer');
