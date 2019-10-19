@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 30, 2019 at 05:11 PM
+-- Generation Time: Oct 18, 2019 at 10:36 PM
 -- Server version: 8.0.16
 -- PHP Version: 7.2.20
 
@@ -21,6 +21,18 @@ SET time_zone = "+00:00";
 --
 -- Database: `byocitychurchsda`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `aid` int(11) NOT NULL,
+  `history` text NOT NULL,
+  `approve` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -49,6 +61,18 @@ CREATE TABLE `gallery` (
   `gid` int(11) NOT NULL,
   `title` varchar(255) NOT NULL,
   `category` varchar(45) NOT NULL DEFAULT 'church',
+  `approve` tinyint(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `home`
+--
+
+CREATE TABLE `home` (
+  `hid` int(11) NOT NULL,
+  `brief` int(11) NOT NULL,
   `approve` tinyint(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -88,6 +112,20 @@ CREATE TABLE `sermons` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `staff`
+--
+
+CREATE TABLE `staff` (
+  `sid` int(11) NOT NULL,
+  `title` varchar(96) NOT NULL,
+  `brief` text NOT NULL,
+  `approve` tinyint(4) NOT NULL,
+  `name` varchar(144) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `users`
 --
 
@@ -108,7 +146,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`uid`, `username`, `name`, `surname`, `email`, `cellphone`, `profile_img`, `password`, `role`) VALUES
-(1, '', '', '', 'nompi.h@gmail.com', 0, '', 'd78cf7aa9f0a49e788d6e9ff8f88d710', 'admin');
+(1, '', '', '', 'nompi.h@gmail.com', 0, '', 'd78cf7aa9f0a49e788d6e9ff8f88d710', 'admin'),
+(3, '', '', '', 'princekudzaimaposa94@gmail.com', 0, '', '$2y$10$LEb8KExXMUMfglthlmSep.X.yEsbeXK8vwvlpmAPwCljbZuQPdUQu', 'user'),
+(4, '', '', '', 'communication@byocitycentersda.org.zw', 0, '', '$2y$10$p2yB6W8kHKEIRY1WCrHF2OT2ZToITPBk4xB/BzsE5jHCo1c1PAo4u', 'user');
 
 -- --------------------------------------------------------
 
@@ -126,7 +166,7 @@ CREATE TABLE `visitors` (
 --
 
 INSERT INTO `visitors` (`id`, `visits`) VALUES
-(1, 0);
+(1, 32);
 
 --
 -- Indexes for dumped tables
@@ -145,6 +185,12 @@ ALTER TABLE `gallery`
   ADD PRIMARY KEY (`gid`);
 
 --
+-- Indexes for table `home`
+--
+ALTER TABLE `home`
+  ADD PRIMARY KEY (`hid`);
+
+--
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
@@ -154,6 +200,12 @@ ALTER TABLE `news`
 -- Indexes for table `sermons`
 --
 ALTER TABLE `sermons`
+  ADD PRIMARY KEY (`sid`);
+
+--
+-- Indexes for table `staff`
+--
+ALTER TABLE `staff`
   ADD PRIMARY KEY (`sid`);
 
 --
@@ -185,6 +237,12 @@ ALTER TABLE `gallery`
   MODIFY `gid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
+-- AUTO_INCREMENT for table `home`
+--
+ALTER TABLE `home`
+  MODIFY `hid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
@@ -197,10 +255,16 @@ ALTER TABLE `sermons`
   MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `staff`
+--
+ALTER TABLE `staff`
+  MODIFY `sid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `visitors`

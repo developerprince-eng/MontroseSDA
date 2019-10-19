@@ -14,4 +14,4 @@ $autoload['config'] = array();
 
 $autoload['language'] = array();
 
-$autoload['model'] = array('gallery_model', 'event_model', 'news_model', 'sermons_model', 'user_model', 'visitors_model');
+$autoload['model'] = array('gallery_model', 'event_model', 'news_model', 'sermons_model', 'user_model', 'visitors_model', 'home_model', 'staff_model', 'about_model');

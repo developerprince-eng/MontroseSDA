@@ -20,6 +20,7 @@ class Sermons_model extends CI_Model{
 		return $query->row_array();
 	}
 
+	
 	public function get_sermons($sid = FALSE, $limit = FALSE, $offset = FALSE){
 		if($limit){
 			$this->db->limit($limit, $offset);

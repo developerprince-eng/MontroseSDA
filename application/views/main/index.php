@@ -27,14 +27,6 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-end" data-scrollax-parent="true">
           <div class="col-md-8 text-justify ftco-animate mb-5 pr-lg-4">
-          	<a href="https://vimeo.com/45830194" class="icon-wrap popup-vimeo d-flex align-items-center mt-4">
-            	<div class="icon d-flex align-items-center justify-content-center">
-            		<span class="ion-ios-play"></span>
-            	</div>
-            	<div class="heading-title ml-3">
-	            	<span>Watch our latest sermons</span>
-            	</div>
-            </a>
           	<h1 class="mb-0">Loving God, Loving Others, Serving God With All Your Heart</h1>
           	<h3 class="subheading mb-4 pb-1">Submit your presence to the creator of the universe</h3>
           </div>
@@ -103,9 +95,6 @@
     		<div class="row d-flex no-gutters">
     			<div class="col-md-6 d-flex flex-column align-items-stretch">
     				<div class="img d-flex align-self-stretch align-items-center justify-content-center" style="background-image:url(static/images/about-2.jpg);">
-    					<a href="https://www.youtube.com/watch?v=ism1XqnZJEg" class="icon-video popup-vimeo d-flex align-items-center justify-content-center text-center">
-    						<span class="ion-ios-play"></span>
-    					</a>
     				</div>
     			</div>
     			<div class="col-md-6 px-md-5 py-4 py-md-5">
@@ -116,44 +105,7 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida mauris vitae dui efficitur gravida. Ut id rhoncus mi. Morbi scelerisque, velit ac laoreet dignissim, est magna faucibus ante, sed aliquam justo nulla sit amet.</p>
 		          </div>
 		        </div>
-		    		<div class="row">
-		          <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center py-4 mb-4">
-		              <div class="text">
-		              	
-		                <strong class="number" data-number="70000">0</strong>
-		                <span>Members</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center py-4 mb-4">
-		              <div class="text">
-		              	
-		                <strong class="number" data-number="1000">0</strong>
-		                <span>Pastors</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center py-4 mb-4">
-		              <div class="text">
-		              	
-		                <strong class="number" data-number="100000">0</strong>
-		                <span>Donation</span>
-		              </div>
-		            </div>
-		          </div>
-		          <div class="col-md-3 justify-content-center counter-wrap ftco-animate">
-		            <div class="block-18 text-center py-4 mb-4">
-		              <div class="text">
-		              	
-		                <strong class="number" data-number="100">0</strong>
-		                <span>Churches</span>
-		              </div>
-		            </div>
-		          </div>
-		        </div>
+
 	        </div>
         </div>
     	</div>
@@ -182,7 +134,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida mauris vi
   					</div>
 						<p>Mauris feugiat maximus nunc nec malesuada. Integer eget consequat felis. Praesent eget enim non velit consequat varius sagittis sit amet magna. Donec sed tincidunt nulla, sit amet maximus nunc. Sed pretium, lacus sit amet consectetur mattis, lacus risus rutrum metus, quis vestibulum ex nisl vitae nisl. Nam congue lectus vitae leo gravida interdum. Sed sit amet massa suscipit, tempor massa eu, viverra urna. Praesent ut massa quis elit mattis faucibus nec nec augue. Vestibulum auctor tortor lacus, sed viverra mauris finibus laoreet. Sed sit amet erat tellus.</p>
 						<p class="mt-4 btn-customize">
-							<a href="https://vimeo.com/45830194" class="btn btn-primary px-4 py-3 mr-md-2 popup-vimeo"><span class="icon-play"></span> Watch Sermons</a> <a href="#" class="btn btn-black px-4 py-3 ml-lg-2"><span class="icon-download"></span> Download Sermons</a>
+							<a href="#" class="btn btn-black px-4 py-3 ml-lg-2"><span class="icon-download"></span> Download Sermons</a>
 						</p>
   				</div>
     		</div>
@@ -324,13 +276,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum magna ex
           	<div class="text">
           		<h2 class="mb-3"><a href="<?php echo base_url(); ?>sermons">Week of Prayer for Youth and Young Adults</a></h2>
           		<div class="meta">
-	  						<p>
-		  						<span><i class="icon-calendar mr-2"></i> Monday, 8:30 Am - Tuesday, 6:00 Pm</span>
-		  						<span><i class="icon-my_location mr-2"></i> <a href="#">Byo City Church</a></span>
-		  						<span><i class="icon-location_city mr-2"></i>116 Hebert Chitepo Street Bulawayo, Zimbabwe</span>
-	  						</p>
-	  					</div>
-	  					<p><a href="<?php echo base_url(); ?>sermons" class="btn btn-primary">Read more</a></p>
+					<p>
+						<span><i class="icon-calendar mr-2"></i> Monday, 8:30 Am - Tuesday, 6:00 Pm</span>
+						<span><i class="icon-my_location mr-2"></i> <a href="#">Byo City Church</a></span>
+						<span><i class="icon-location_city mr-2"></i>116 Hebert Chitepo Street Bulawayo, Zimbabwe</span>
+					</p>
+				</div>
+				<p><a href="<?php echo base_url(); ?>sermons" class="btn btn-primary">Read more</a></p>
           	</div>
           </div>
           <div class="col-md-3 event-wrap event-wrap-full ftco-animate">
@@ -338,13 +290,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum magna ex
           	<div class="text">
           		<h2 class="mb-3"><a href="<?php echo base_url(); ?>sermons">World Orphans/Vulnerable Children’s Day</a></h2>
           		<div class="meta">
-	  						<p>
-		  						<span><i class="icon-calendar mr-2"></i> Monday, 8:30 Am - Tuesday, 6:00 Pm</span>
-		  						<span><i class="icon-my_location mr-2"></i> <a href="#">Byo City Church</a></span>
-		  						<span><i class="icon-location_city mr-2"></i> 116 Hebert Chitepo Street Bulawayo, Zimbabwe</span>
-	  						</p>
-	  					</div>
-	  					<p><a href="<?php echo base_url(); ?>sermons" class="btn btn-primary">Read more</a></p>
+					<p>
+						<span><i class="icon-calendar mr-2"></i> Monday, 8:30 Am - Tuesday, 6:00 Pm</span>
+						<span><i class="icon-my_location mr-2"></i> <a href="#">Byo City Church</a></span>
+						<span><i class="icon-location_city mr-2"></i> 116 Hebert Chitepo Street Bulawayo, Zimbabwe</span>
+					</p>
+				</div>
+				<p><a href="<?php echo base_url(); ?>sermons" class="btn btn-primary">Read more</a></p>
           	</div>
           </div>
           <div class="col-md-3 event-wrap event-wrap-full ftco-animate">
@@ -352,27 +304,27 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum magna ex
           	<div class="text">
           		<h2 class="mb-3"><a href="<?php echo base_url(); ?>sermons">HIV/AIDS Awareness</a></h2>
           		<div class="meta">
-	  						<p>
-		  						<span><i class="icon-calendar mr-2"></i> Monday, 8:30 Am - Tuesday, 6:00 Pm</span>
-		  						<span><i class="icon-my_location mr-2"></i> <a href="#">Byo City Church</a></span>
-		  						<span><i class="icon-location_city mr-2"></i> 116 Hebert Chitepo Street Bulawayo, Zimbabwe</span>
-	  						</p>
-	  					</div>
-	  					<p><a href="<?php echo base_url(); ?>sermons" class="btn btn-primary">Read more</a></p>
-          	</div>
+					<p>
+						<span><i class="icon-calendar mr-2"></i> Monday, 8:30 Am - Tuesday, 6:00 Pm</span>
+						<span><i class="icon-my_location mr-2"></i> <a href="#">Byo City Church</a></span>
+						<span><i class="icon-location_city mr-2"></i> 116 Hebert Chitepo Street Bulawayo, Zimbabwe</span>
+					</p>
+				</div>
+				<p><a href="<?php echo base_url(); ?>sermons" class="btn btn-primary">Read more</a></p>
+			</div>
           </div>
           <div class="col-md-3 event-wrap event-wrap-full ftco-animate">
           	<div class="img"style="background-image: url(static/images/music_test.jpg);"></div>
           	<div class="text">
           		<h2 class="mb-3"><a href="<?php echo base_url(); ?>sermons">World Orphans/Vulnerable Children’s Day</a></h2>
           		<div class="meta">
-	  						<p>
-		  						<span><i class="icon-calendar mr-2"></i> Monday, 8:00 Am - Tuesday, 8:00 Pm</span>
-		  						<span><i class="icon-my_location mr-2"></i> <a href="#">Byo City Church</a></span>
-		  						<span><i class="icon-location_city mr-2"></i> 116 Hebert Chitepo Street Bulawayo, Zimbabwe</span>
-	  						</p>
-	  					</div>
-	  					<p><a href="<?php echo base_url(); ?>sermons" class="btn btn-primary">Read more</a></p>
+					<p>
+						<span><i class="icon-calendar mr-2"></i> Monday, 8:00 Am - Tuesday, 8:00 Pm</span>
+						<span><i class="icon-my_location mr-2"></i> <a href="#">Byo City Church</a></span>
+						<span><i class="icon-location_city mr-2"></i> 116 Hebert Chitepo Street Bulawayo, Zimbabwe</span>
+					</p>
+				</div>
+				<p><a href="<?php echo base_url(); ?>sermons" class="btn btn-primary">Read more</a></p>
           	</div>
           </div>
         </div>

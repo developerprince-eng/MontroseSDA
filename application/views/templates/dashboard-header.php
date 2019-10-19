@@ -91,32 +91,45 @@
               </ul>
             </div>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#news" aria-expanded="false" aria-controls="auth">
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#home" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi mdi-blur-linear menu-icon"></i>
-              <span class="menu-title">News</span>
+              <span class="menu-title">Home</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="news">
+            <div class="collapse" id="home">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="news-list"> View List </a></li>
-                <li class="nav-item"> <a class="nav-link" href="news-add"> Add News </a></li>
+                <li class="nav-item"> <a class="nav-link" href="home-list"> View List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="home-add"> Add Home Item </a></li>
               </ul>
             </div>
-          </li> -->
-          <!-- <li class="nav-item">
-            <a class="nav-link" data-toggle="collapse" href="#gallery" aria-expanded="false" aria-controls="auth">
-              <i class="mdi mdi mdi-panorama menu-icon"></i>
-              <span class="menu-title">Gallery</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#staff" aria-expanded="false" aria-controls="auth">
+              <i class="mdi mdi mdi-account-multiple menu-icon"></i>
+              <span class="menu-title">Staff</span>
               <i class="menu-arrow"></i>
             </a>
-            <div class="collapse" id="gallery">
+            <div class="collapse" id="staff">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="gallery-list"> View List </a></li>
-                <li class="nav-item"> <a class="nav-link" href="gallery-item-add"> Add Picture </a></li>
+                <li class="nav-item"> <a class="nav-link" href="staff-list"> View List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="staff-add"> Add Staff </a></li>
               </ul>
             </div>
-          </li> -->
+					</li>
+					<li class="nav-item">
+            <a class="nav-link" data-toggle="collapse" href="#about" aria-expanded="false" aria-controls="auth">
+              <i class="mdi mdi mdi-script menu-icon"></i>
+              <span class="menu-title">About</span>
+              <i class="menu-arrow"></i>
+            </a>
+            <div class="collapse" id="about">
+              <ul class="nav flex-column sub-menu">
+                <li class="nav-item"> <a class="nav-link" href="about-list"> View List </a></li>
+                <li class="nav-item"> <a class="nav-link" href="about-add"> Add About </a></li>
+              </ul>
+            </div>
+          </li>
           <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#sermons" aria-expanded="false" aria-controls="auth">
               <i class="mdi mdi mdi-book-open-variant menu-icon"></i>

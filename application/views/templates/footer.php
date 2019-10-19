@@ -3,9 +3,25 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Bulawayo City Centre Church</h2>
-              <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum magna ex, in malesuada mi varius ac. Fusce ac sem.</p>
+							<h2 class="ftco-heading-2">Bulawayo City Centre Church</h2>
+							<?php if($home == null) : ?>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum magna ex, in malesuada mi varius ac. Fusce ac sem.
+								</p>
+							<?php else: ?>
+								<?php foreach($home as $item) : ?>
+									<?php if($item['approve'] == 1) : ?>
+										<p>
+											<?php echo $item['brief'] ?>
+										</p>
+									<?php else : ?>
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec bibendum magna ex, in malesuada mi varius ac. Fusce ac sem.
+										</p>
+									<?php endif ?>
+								<?php endforeach ?>
+							<?php endif ?>
+              
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="https://www.facebook.com/byocitycentresda/"><span class="icon-facebook"></span></a></li>

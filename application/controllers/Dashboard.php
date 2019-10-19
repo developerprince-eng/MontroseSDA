@@ -16,6 +16,84 @@ class Dashboard extends CI_Controller {
 		$this->load->view('templates/dashboard-footer');
 	}
 
+	//About
+	public function about_list()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$data['about'] = $this->about_model->get_about();
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/about_list', $data);
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function about_add()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/about_add');
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function about_add_item()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$this->load->helper(array('form','url'));
+
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('	history', 'required');
+
+
+		if($this->form_validation->run() === FALSE)
+		{
+			redirect('about_add');
+		}else 
+		{
+			if($this->upload->do_upload('userfile'))
+			{
+				$about = array(
+					
+					'history' => $this->input->post('history'),
+				);
+				$this->load->model('about_model');
+				$this->sermons_model->insert($about);
+				redirect('about-list');
+			}
+		}
+	}
+
+	public function about_delete_item($id)
+	{
+		$this->load->model('about_model');
+		$this->about_model->delete($id);
+		redirect('about-list');
+	}
+
+	public function about_suspend_item($id)
+	{	
+		$this->load->model('about_model');
+		$this->about_model->suspend($id);
+		redirect('about-list');
+	}
+
+	public function about_approve_item($id)
+	{
+		$this->load->model('about_model');
+		$this->about_model->approve($id);
+		redirect('about-list');
+
+	}
+
+	//Event
 	public function events_list()
 	{
 		$this->load->library('session');
@@ -116,6 +194,83 @@ class Dashboard extends CI_Controller {
 		redirect('events-list');
 	}
 
+	//Home
+	public function home_list()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$data['home'] = $this->home_model->get_home();
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/home_list', $data);
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function home_add()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/home_add');
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function home_add_item()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$this->load->helper(array('form','url'));
+
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('brief', 'required');
+
+
+		if($this->form_validation->run() === FALSE)
+		{
+			redirect('home_add');
+		}else 
+		{
+			if($this->upload->do_upload('userfile'))
+			{
+				$home = array(
+					
+					'brief' => $this->input->post('brief'),
+				);
+				$this->load->model('home_model');
+				$this->sermons_model->insert($home);
+				redirect('home-list');
+			}
+		}
+	}
+
+	public function home_delete_item($id)
+	{
+		$this->load->model('home_model');
+		$this->home_model->delete($id);
+		redirect('home-list');
+	}
+
+	public function home_suspend_item($id)
+	{	
+		$this->load->model('home_model');
+		$this->home_model->suspend($id);
+		redirect('home-list');
+	}
+
+	public function home_approve_item($id)
+	{
+		$this->load->model('home_model');
+		$this->home_model->approve($id);
+		redirect('home-list');
+	}
+
+	//Gallery
 	public function gallery_list()
 	{
 		$this->load->library('session');
@@ -207,6 +362,7 @@ class Dashboard extends CI_Controller {
 		redirect('gallery-list');
 	}
 
+	//News
 	public function news_list()
 	{
 		$this->load->library('session');
@@ -306,6 +462,7 @@ class Dashboard extends CI_Controller {
 		redirect('news-list');
 	}
 
+	//Sermons
 	public function sermons_list()
 	{
 		$this->load->library('session');
@@ -385,8 +542,8 @@ class Dashboard extends CI_Controller {
 
 	public function sermons_suspend_item($id)
 	{	
-		$this->load->model('event_model');
-		$this->event_model->suspend($id);
+		$this->load->model('sermons_model');
+		$this->sermons_model->suspend($id);
 		redirect('sermons-list');
 	}
 
@@ -397,4 +554,80 @@ class Dashboard extends CI_Controller {
 		redirect('sermons-list');
 	}
 
+	//Staff
+	public function staff_list()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$data['staff'] = $this->staff_model->get_staff();
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/staff_list', $data);
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function staff_add()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		
+		$this->load->view('templates/dashboard-header');
+		$this->load->view('dashboard/staff_add');
+		$this->load->view('templates/dashboard-footer');
+	}
+
+	public function staff_add_item()
+	{
+		$this->load->library('session');
+		if(!$this->session->userdata('logged_in')){
+			redirect('auth');
+		}
+		$this->load->helper(array('form','url'));
+
+		$this->load->library('form_validation');
+		$this->form_validation->set_rules('title', 'name', 'required');
+
+
+		if($this->form_validation->run() === FALSE)
+		{
+			redirect('staff_add');
+		}else 
+		{
+			if($this->upload->do_upload('userfile'))
+			{
+				$staff = array(
+					'title' => $this->input->post('title'),
+					'name' => $this->input->post('name'),
+					'brief' => $this->input->post('brief'),
+				);
+				$this->load->model('staff_model');
+				$this->sermons_model->insert($staff);
+				redirect('staff-list');
+			}
+		}
+	}
+
+	public function staff_delete_item($id)
+	{
+		$this->load->model('staff_model');
+		$this->staff_model->delete($id);
+		redirect('staff-list');
+	}
+
+	public function staff_suspend_item($id)
+	{	
+		$this->load->model('staff_model');
+		$this->staff_model->suspend($id);
+		redirect('staff-list');
+	}
+
+	public function staff_approve_item($id)
+	{
+		$this->load->model('staff_model');
+		$this->staff_model->approve($id);
+		redirect('staff-list');
+	}
 }
